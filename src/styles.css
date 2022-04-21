@@ -1,0 +1,7 @@
+@import '~ngx-toastr/toastr';
+body {
+    
+    background-image: url("https://images.unsplash.com/photo-1543352634-99a5d50ae78e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+    font-family: 'Poppins', sans-serif !important;
+
+}

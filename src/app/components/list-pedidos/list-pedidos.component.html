@@ -1,0 +1,45 @@
+<div class = "container mt-4">
+    <div class = "card">
+        <div class = "card-body">
+            <span class = "h3">LISTA DE PEDIDOS</span>
+            
+            <a routerLink = "/create-pedido"><img class = "float-end" id = "logo" src="https://media.giphy.com/media/kD9nHXB2M9fLkyO7WK/giphy.gif" width = "80"></a>
+            <h3 *ngif="pedidos.lenght < 0" >No tienes pedidos aún</h3>
+            <table class="table table-dark table-striped mt-5">
+              
+                <thead class = "mt-5">
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>No Pedido</th>
+                    <th>Domicilio</th>
+                    <th>Pago</th>
+                    <th>Editar</th>
+
+                   
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let pedido of pedidos">
+                    <td>{{ pedido.nombre }}</td>
+                    <td>{{ pedido.telefono }}</td>
+                    <td>{{ pedido.noPedido }}</td>
+                    <td>{{ pedido.domicilio }}</td>
+                    <td>{{ pedido.pago | currency }}</td>
+                    <td>
+                        <i class="fas fa-edit fa-lg text-info" style = "margin-right: 8px;" [routerLink]="['/editPedido/', pedido.id]"></i>
+                        <i (click)="eliminarPedido(pedido.id)" class="fas fa-trash fa-lg text-danger"></i>
+                    </td>
+                  </tr>
+
+                  
+                  
+                </tbody>
+              </table>
+              <p> 
+                <img src = "https://media.giphy.com/media/cmCHuk53AiTmOwBXlw/giphy.gif" width = "250">
+                </p>
+        </div>
+    </div>
+</div>

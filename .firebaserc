@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pedidos-caa3d": {
+      "hosting": {
+        "meteor-food": [
+          "pedidos-caa3d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pedidos-caa3d"
+  }
+}
